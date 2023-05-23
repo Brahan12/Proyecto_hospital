@@ -19,9 +19,9 @@ guardarEnCookie(datosPaciente)
         formularioPaciente.reset()
     }
 });
-// Función para guardar una mascota en la cookie
+// Función para guardar un paciente en la cookie
 function guardarEnCookie(paciente) {
-    // Obtener los datos de la cookie actual de mascotas
+    // Obtener los datos de la cookie actual de paciente
     let datosPac = getCookie("pacientes");
     // Si la cookie está vacía, inicializarla como un arreglo vacío
     if (datosPac === "") {
@@ -29,9 +29,9 @@ function guardarEnCookie(paciente) {
     }
     // Convertir la cookie en un arreglo de objetos
     const pacientes = JSON.parse(datosPac);
-    // Agregar la nueva mascota al arreglo
+    // Agregar el nuevo paciente al arreglo
     pacientes.push(paciente);
-    // Convertir el arreglo de mascotas de nuevo a un JSON
+    // Convertir el arreglo de los pacientes de nuevo a un JSON
     const nuevoJSON = JSON.stringify(pacientes);
     // Guardar el JSON en la cookie
     setCookie("pacientes", nuevoJSON);

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Veterinaria</title>
+    <title>Formulario pacientes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assents/imagenes/icono hospital.jpg">
+    <script src="https://kit.fontawesome.com/b74d6ed8cb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <header><img src="/assents/imagenes/logo hospital.png" alt="Logo hospital" width="46px" height="46px">
         <h1>HOSPITAL LOS RECUERDOS DE ELLA</h1>
     </header>
     <main>
@@ -39,11 +41,11 @@
                 <option value="Radiologia">Radiologia</option>
             </select>
 
-            <input type="submit" value="Enviar">
+            <div class="boton-container">
+                <input type="submit" value="Enviar">
+                <input type="button" id="botonVolver" value="Volver">
+            </div>
         </form>
-        <div class="boton-container">
-            <input type="button" id="botonVolver" value="Volver">
-        </div>
     </main>
     <script src="volver.js"></script>
     <script src="guardado-paciente.js"></script>

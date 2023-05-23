@@ -20,7 +20,7 @@ for (let i = 0; i < medicosCookie.length; i++) {
     const correoContacto = fila.insertCell();
     correoContacto.textContent = medico.correo;
     //colocar los pacientes que atiende el medico
-    //mediante filter encontramos todas las mascotas que tienen esa especialidad
+    //mediante filter encontramos todas los pacientes que tienen esa especialidad
     let pacientesEncontrados = pacientesCookie.filter(paciente => medico.especialidad === paciente.especialidadRequerida);
     //se creo la celda
     const medicoPaciente = fila.insertCell();

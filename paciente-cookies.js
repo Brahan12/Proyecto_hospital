@@ -1,16 +1,16 @@
 //cargar los datos de la cookie
-//cargar los medicos y mascotas que ya esten guardados, como estan en formato JSON se pasan a objetos para poder trabajarlos en js
+//cargar los medicos y pacientes que ya esten guardados, como estan en formato JSON se pasan a objetos para poder trabajarlos en js
 const pacientesCookie = JSON.parse(getCookie('pacientes'));
 const medicosCookie = JSON.parse(getCookie('medicos') || "[]");
-//buscar la tabla mascotas en HTML para agregar las nuevas mascotas
+//buscar la tabla pacientes en HTML para agregar los nuevos pacientes
 const tablaPacientes = document.getElementById("tabla-pacientes");
 const cuerpoTabla = tablaPacientes.querySelector("tbody");
 
 for (let i = 0; i < pacientesCookie.length; i++) {
     const paciente = pacientesCookie[i];
-    //insertar fila para agregar mascotas
+    //insertar fila para agregar pacientes
     const fila = cuerpoTabla.insertRow();
-    //insertar celdas para agregar cada uno de los datos de las mascotas
+    //insertar celdas para agregar cada uno de los datos de los pacientes
     const celdaNombrePaciente = fila.insertCell();
     const celdaApellidoPaciente = fila.insertCell();
     const celdaCedulaPaciente = fila.insertCell();
